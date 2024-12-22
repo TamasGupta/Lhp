@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Sun, Moon, User } from 'lucide-react';
-import Logo from '../assets/comedy.gif'
+import Logo from '../assets/Preview.png'
 type NavbarProps = {
   onThemeToggle: () => void;
   isDarkMode: boolean;
@@ -52,9 +52,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onThemeToggle, isDarkMode ,handl
     >
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <div className="text-2xl font-semibold flex">
+        <div className="text-2xl font-semibold flex items-center gap-3">
        
-         
+           <div className='w-10 h-10 rounded-full overflow-hidden'>
+           <img src={Logo} alt='logo' className=""/>
+           </div>
             <span className='greatVibes'>Last Hour Prep</span>
           
         </div>
